@@ -1,37 +1,52 @@
-# 💊 ReVanced Manager
+# ReVanced Manager builds for Android 6.0-7.1
 
-The official ReVanced Manager based on Flutter.
+Custom builds of ReVanced Manager, for Android 6.0-7.1
 
-> **Warning**: This repository currently has no active maintainer. For that reason, development is stale. Active development continues for [revanced-cli](https://github.com/revanced/revanced-cli). If you are interested in maintaining this repository, please let us know at manager@revanced.app.
+Combination with my [ReVanced Patches for YouTube 17.34.36](https://github.com/kitadai31/revanced-patches-android6-7), you can build YouTube ReVanced easily with an Android 6 or 7 device alone.
 
-## 🔽 Download
-To download the Alpha version of Manager, go [here](https://github.com/revanced/revanced-manager/releases/latest) and install the provided APK file.
+## Download
+Go to [Releases](https://github.com/kitadai31/revanced-manager-android6-7/releases) page
 
-## 📝 Prerequisites
-1. Android 8 or higher
-2. Does not work on some armv7 devices
-3. [Vanced MicroG](https://github.com/TeamVanced/VancedMicroG/releases) required for YouTube and YouTube Music (Only for non-root)
+## What I did to support Android 6 & 7
+- Change minSdkVersion to 23
+- Fix Device Apps plugin library problem
+- Change apksig library to another one
+  - Thank you [MuntashirAkon/apksig-android](https://github.com/MuntashirAkon/apksig-android) !
+- Enable Java nio API desugaring library
+- Remove unsupported java.nio.file API from patches (Patches side change)
 
-## ⚠️ Disclaimer
-*Please note that even though we're releasing the Manager, it is an ALPHA version. There's a big chance that the Manager might not work at all for you.*
+## Prerequisites
+1. Android 6.0 or higher
+2. Does not work on some armv7 (32bit) devices
+3. [Vanced MicroG](https://github.com/inotia00/VancedMicroG/releases) is required for YouTube and YouTube Music (Only for non-root)
 
-## 🔴 Issues
-For suggestions and bug reports, open an issue [here](https://github.com/revanced/revanced-manager/issues/new/choose).
+# How to patch
 
-## 💭 Discussion
-If you wish to discuss the Manager, a thread has been made under the [#development](https://discord.com/channels/952946952348270622/1002922226443632761) channel in the Discord server, please note that this thread may be temporary and may be removed in the future.
+## YouTube
+Official patches and Extended patches are not compatible with YouTube 17.34.36. (Android 6 & 7 final version)
 
+Therefore, I recommend changing the patch source to [kitadai31/revanced-patches-android6-7](https://github.com/kitadai31/revanced-patches-android6-7), that I'm providing.
 
-## 🌐 Translation
-[![Crowdin](https://badges.crowdin.net/revanced/localized.svg)](https://crowdin.com/project/revanced)
+<img src="https://user-images.githubusercontent.com/90122968/230283820-dd55a454-6267-43dc-a6c0-eb1b6f5f4e15.png" width="240">
 
-If you wish to translate ReVanced Manager, we're accepting translations on [Crowdin](https://translate.revanced.app)
+## YouTube Music
+ReVanced Music - No plobrem with recommended patches.
 
-## 🛠️ Building Manager from source
-1. Setup flutter environment for your [platform](https://docs.flutter.dev/get-started/install)
-2. Clone the repository locally
-3. Add your github token in gradle.properties like [this](https://github.com/revanced/revanced-manager/blob/docs/docs/5_building-from-source.md)
-4. Open the project in terminal
-5. Run `flutter pub get` in terminal
-6. Then `flutter packages pub run build_runner build --delete-conflicting-outputs` (Must be done on each git pull)
-7. To build release apk run `flutter build apk`
+ReVanced Extended Music - The following patches are not available.
+
+- `Custom Branding xxx`
+- `Optimize Resource`
+- `Translations`
+
+These patches cause NoSuchMethodError. You have to exclude these patches.
+
+## Other apps
+You can patch as usual as original Manager.
+
+Please note that errors may occur, such as NoSuchMethodError, NoClassDefFoundError.  
+
+If an error occurred and the error was specific to Android 6 & 7 , please give up.
+
+However, you can use ReVanced CLI, ReVanced Builder (or rvx-builder) or Revancify instead of this ReVanced Manager.
+
+Also, if you have other Android 8 or higher devices, you can use ReVanced Manager on that device and transfer patched APK to your old devices.
