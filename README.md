@@ -7,19 +7,21 @@ Combining with my [ReVanced Patches for YouTube 17.34.36](https://github.com/kit
 ## Download
 Go to [Releases](https://github.com/kitadai31/revanced-manager-android6-7/releases) page
 
-## Announcement (2023/04/16)
-### It may not work on Android6.0!
+## Announcement (April 16)
+### It may not work on Android6.0
 
 Apparently it doesn't work on Android 6.0.  
 It is reported that this error was shown and Manager was aborted.
 
 ```
-brut.androlib.AndrolibException:brut.common.brutException: could not exec (exit code = 1): [/data/app/app.revanced.manager.flutter-1/lib/arm64/libaapt2.so, ...
+brut.androlib.AndrolibException:brut.common.brutException:
+could not exec (exit code = 1):
+[/data/app/app.revanced.manager.flutter-1/lib/arm64/libaapt2.so, ...
 ```
 
 I'm sorry for releasing this app without sufficient confirmation of its operation.
 
-Unfortunately, I do not have Android 6.0 devices, so I cannot confirm that it works.  
+Unfortunately, I don't have Android 6.0 devices, so I cannot confirm that it works.  
 The emulator was not helpful as it displayed a mysterious error.
 
 If anyone has successfully patched on Android 6.0, please report it on the Discussions page or my twitter!
@@ -41,13 +43,14 @@ If anyone has successfully patched on Android 6.0, please report it on the Discu
 The usage is same as the original ReVanced Manager. This section describes the points specific to Android 6-7.
 
 ## YouTube
-Official patches and latest Extended patches are not compatible with YouTube 17.34.36. (17.34.36 is the final version for Android 6 & 7.)
+Official patches and latest Extended patches are not compatible with YouTube 17.34.36.  
+(17.34.36 is the final version for Android 6 & 7.)
 
-Therefore, I recommend changing the patch source to [kitadai31/revanced-patches-android6-7/](https://github.com/kitadai31/revanced-patches-android6-7), provided by me.
+Therefore, I recommend changing the patch source to [ReVanced Patches for YouTube 17.34.36](https://github.com/kitadai31/revanced-patches-android6-7), provided by me.
 
 <img src="https://user-images.githubusercontent.com/90122968/230283820-dd55a454-6267-43dc-a6c0-eb1b6f5f4e15.png" width="240">
 
-See [How to build](https://github.com/kitadai31/revanced-patches-android6-7/wiki/How-to-build) page in kitadai31/revanced-patches-android6-7.
+See [How to build](https://github.com/kitadai31/revanced-patches-android6-7/wiki/How-to-build) page for details.
 
 ## YouTube Music
 **ReVanced Music** - No plobrem with recommended patches.
