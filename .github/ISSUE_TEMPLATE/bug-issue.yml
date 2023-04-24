@@ -32,25 +32,25 @@ body:
       placeholder: Step 1. Download some files. Step 2. ...
     validations:
       required: true
-  - type: textarea
+  - type: input
     attributes:
       label: Android version
       description: Android version used.
     validations:
       required: true
-  - type: textarea
+  - type: input
     attributes:
       label: Manager version
       description: Manager version used.
     validations:
       required: true
-  - type: textarea
+  - type: input
     attributes:
       label: Target app name
       description: App you tried to patch.
     validations:
       required: true
-  - type: textarea
+  - type: input
     attributes:
       label: Target app version.
       description: Version of the app you tried to patch.
