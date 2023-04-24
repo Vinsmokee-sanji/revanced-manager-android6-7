@@ -1,6 +1,6 @@
 name: 🐞 Bug report
 description: Report a very clearly broken issue.
-title: 'bug: <title>'
+title: 'bug: '
 labels: [bug]
 body:
   - type: markdown
@@ -14,8 +14,7 @@ body:
     attributes:
       label: Type
       options:
-        - Error while running the manager
-        - Error at runtime
+        - Error while patching
         - Cosmetic
         - Other
     validations:
@@ -47,13 +46,13 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Target package name
+      label: Target app name
       description: App you tried to patch.
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Target package version.
+      label: Target app version.
       description: Version of the app you tried to patch.
     validations:
       required: true
